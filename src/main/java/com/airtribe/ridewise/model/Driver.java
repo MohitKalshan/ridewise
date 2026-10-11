@@ -1,12 +1,14 @@
 package com.airtribe.ridewise.model;
 
 import com.airtribe.ridewise.util.IdGenerator;
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 
+@Getter
 public class Driver {
 
     private final String id;
@@ -25,30 +27,6 @@ public class Driver {
         this.available = true;
         this.vehicleType = vehicleType;
         this.rideHistory = new ArrayList<>();
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getCurrentLatitude() {
-        return currentLatitude;
-    }
-
-    public double getCurrentLongitude() {
-        return currentLongitude;
-    }
-
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public VehicleType getVehicleType() {
-        return vehicleType;
     }
 
     public List<Ride> getRideHistory() {

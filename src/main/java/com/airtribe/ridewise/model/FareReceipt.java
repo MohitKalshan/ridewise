@@ -1,7 +1,10 @@
 package com.airtribe.ridewise.model;
 
+import lombok.Getter;
+
 import java.time.LocalDateTime;
 
+@Getter
 public class FareReceipt {
 
     private final String rideId;
@@ -12,18 +15,6 @@ public class FareReceipt {
         this.rideId = rideId;
         this.amount = amount;
         this.generatedAt = LocalDateTime.now();
-    }
-
-    public String getRideId() {
-        return rideId;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public LocalDateTime getGeneratedAt() {
-        return generatedAt;
     }
 
     @Override

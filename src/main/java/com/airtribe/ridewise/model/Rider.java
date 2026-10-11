@@ -1,11 +1,13 @@
 package com.airtribe.ridewise.model;
 
 import com.airtribe.ridewise.util.IdGenerator;
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@Getter
 public class Rider {
 
     private final String id;
@@ -20,22 +22,6 @@ public class Rider {
         this.latitude = latitude;
         this.longitude = longitude;
         this.rideHistory = new ArrayList<>();
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getLatitude() {
-        return latitude;
-    }
-
-    public double getLongitude() {
-        return longitude;
     }
 
     public List<Ride> getRideHistory() {

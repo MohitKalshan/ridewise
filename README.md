@@ -34,6 +34,7 @@ Invalid transitions (e.g. completing a `REQUESTED` ride) are rejected with `Ille
 | Java | 22 (toolchain) |
 | Spring Boot | 4.1.1 |
 | Build | Gradle (wrapper 9.7.1) |
+| Boilerplate | **Lombok** (`@Getter` on the domain entities) |
 | Testing | JUnit 5 via `spring-boot-starter-test` |
 
 ---

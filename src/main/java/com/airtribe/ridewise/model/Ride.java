@@ -1,7 +1,9 @@
 package com.airtribe.ridewise.model;
 
 import com.airtribe.ridewise.util.IdGenerator;
+import lombok.Getter;
 
+@Getter
 public class Ride {
 
     private final String id;
@@ -25,46 +27,6 @@ public class Ride {
         this.dropOffLongitude = dropOffLongitude;
         this.distance = calculateDistance(pickupLatitude, pickupLongitude, dropOffLatitude, dropOffLongitude);
         this.status = RideStatus.REQUESTED;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public Rider getRider() {
-        return rider;
-    }
-
-    public Driver getDriver() {
-        return driver;
-    }
-
-    public double getPickupLatitude() {
-        return pickupLatitude;
-    }
-
-    public double getPickupLongitude() {
-        return pickupLongitude;
-    }
-
-    public double getDropOffLatitude() {
-        return dropOffLatitude;
-    }
-
-    public double getDropOffLongitude() {
-        return dropOffLongitude;
-    }
-
-    public double getDistance() {
-        return distance;
-    }
-
-    public RideStatus getStatus() {
-        return status;
-    }
-
-    public FareReceipt getFareReceipt() {
-        return fareReceipt;
     }
 
     public void assignDriver(Driver driver) {
